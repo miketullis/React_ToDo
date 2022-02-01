@@ -1,0 +1,146 @@
+section.Todo {
+    /* background-image: url('../../images/background.jpg'); */
+    background-size: 100%;
+    background-position: bottom;
+    background-color: black;
+}
+section.todo {
+    /* background-image: url('../../images/background.jpg'); */
+    background-size: 100%;
+    background-position: bottom;
+    background-color: black;
+    
+}
+section.Todo article.todoGallery {
+        padding: 2em 0 4em;
+        width: 100%;
+}
+
+article.TodoGallery div.singleTodo {
+    border: 2px solid #212529;
+    text-align: center;
+    position: relative; 
+    padding: 0 0 2em;
+    height: 15em;
+    margin: 0;
+    border-radius: 5px;
+    background-color: rgba(200,200,200, .95);    
+}
+
+div.singleTodo  {
+    position:relative;
+    border: 1px, solid, #212529;
+    background-color:rgba(200,200,200, .75);
+    padding: 0 0 1em;
+    border-radius: 15px;
+    box-shadow: 6px 6px 8px darkgrey;
+}   
+
+div.singleTodo h3 {
+    padding: .5em 0;
+    background-color:#262626;
+    border-bottom: 4px solid #F33F3F;
+    color: whitesmoke;
+    border-radius: 15px 15px 0 0;
+}   
+
+div.singleTodo p {
+    padding: 1em;
+}
+
+/* #region CreateForm */
+.createTodo .card {
+    border: none;
+}
+
+.createTodo form{
+    padding:2em;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.singleTodo button#deleteLink {
+  position: absolute;
+  font-size: 1.2em;   
+  top: .75em;
+  right: .75em;
+  background: none;
+  outline: none;
+  color: whitesmoke;
+  border: 2px solid #F33F3F;
+  border-radius: 5px;
+  transition: .5s;
+}
+
+button#deleteLink:hover, button#editLink:hover {
+  background-color:rgba(200,200,200, .95);
+  color: rgb(144, 45, 20);
+  border: 2px solid rgb(144, 45, 20);
+}
+
+.singleTodo button#editLink {
+  position: absolute;
+  font-size: 1.2em;
+  top: .75em;
+  left: .75em;
+  background: none;
+  outline: none;
+  color: whitesmoke;
+  border: 2px solid #F33F3F;
+  border-radius: 5px;
+  transition: .5s;
+}
+
+article.TodoGallery h2.alert {
+  height: 3.5em;
+}
+
+.container {
+  /* background-color:rgba(200,200,200, .95); */
+  min-height: calc( 100vh - 442px ) !important;
+
+}
+
+
+.dark{
+color: whitesmoke;
+background-color: #262626;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1023px) {
+    section.Todo {
+        background-size: 200%;
+    }
+    .createTodo form {
+        width: 95%;
+    }
+}
+/* #endregion */
+
+
+
+
+
+
+
+
+
+
