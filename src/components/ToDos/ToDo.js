@@ -9,6 +9,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import Logout from "../Auth/Logout";
 import FilterCat from "./FilterCat";
 
+
 export default function ToDos() {
   const [todos, setToDos] = useState(sampleToDos);
   const { currentUser } = useAuth();
@@ -17,14 +18,16 @@ export default function ToDos() {
   const [filter, setFilter] = useState(0);
 
   const getToDos = () => {
-    axios.get(`http://localhost:55378/api/todo`).then((response) => {
+   // axios.get(`http://localhost:55378/api/todo`).then((response) => {
+    axios.get(`http://api.miketullis.com/api/todo`).then((response) => {
       console.table(response.data);
       setToDos(response.data);
     });
   };
 
   const getCategories = () => {
-    axios.get(`http://localhost:55378/api/categories/`).then((response) => {
+    //axios.get(`http://localhost:55378/api/categories/`).then((response) => {
+    axios.get(`http://api.miketullis.com/api/categories/`).then((response) => {
       console.table(response.data);
       setCategories(response.data);
     });
@@ -32,7 +35,8 @@ export default function ToDos() {
 
   // function to delete from the API
   const deleteToDo = (id) => {
-    axios.delete(`http://localhost:55378/api/todo/${id}`).then(() => {
+    // axios.delete(`http://localhost:55378/api/todo/${id}`).then(() => {
+    axios.delete(`http://api.miketullis.com/api/todo/${id}`).then(() => {
       getToDos();
     });
   };
@@ -43,18 +47,19 @@ export default function ToDos() {
     getCategories();
   }, []);
 
+
   return (
     <section className="todos">
-      <article className="bg-info p-5 text-center">
-        <h1>Projects To Do</h1>
+      <article className="dark pt-0 pb-3 text-center">
+        <h1>projects to do</h1>
       </article>
 
       {/* CREATE-STEP 3 - Conditional rendering for the create form.  We are using the currentUser.email to determine if the logged in user has access to create functionality */}
       {currentUser.email === "miketullis@hotmail.com" && (
-        <div className="bg-dark p-2 mb-3 text-center">
+        <div className="dark p-2 text-center">
           <button
             onClick={() => setShowCreate(!showCreate)}
-            className="btn btn-info"
+            className="btn dark"
           >
             {!showCreate ? "Create New ToDo" : "Close"}
           </button>
@@ -70,9 +75,9 @@ export default function ToDos() {
         </div>
       )}
 
+      <Container>
       <FilterCat setFilter={setFilter} categories={categories} />
 
-      <Container>
         <article className="todoGallery row justify-content-center">
           {filter === 0
             ? todos.map((todo) => (
@@ -104,7 +109,7 @@ export default function ToDos() {
             )}
         </article>
       </Container>
-      {currentUser && <Logout />}
+      {currentUser && <Logout />} 
     </section>
   );
 }

@@ -1,8 +1,24 @@
-.dark{
-    color: whitesmoke;
-    background-color: #262626;
-    
-    }
-    
-    
-    
+.dark {
+  color: #86C232;
+  background-color: #262626;
+}
+
+a.nav-link {
+  font-size: 20px;
+  color: #86C232;
+
+}
+a.nav-link.active {
+  color: #61892F;
+}
+
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #61892F;
+}
+
+.logo:hover{
+    opacity: 55%;
+}
+.logo{
+   max-width: 70vw;
+}

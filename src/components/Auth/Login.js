@@ -15,17 +15,17 @@ async function handleAuth(){
 
   return (
     <div className="login">
-      <article className="bg-info mb-5 p-5 text-dark">
-        <h1>Welcome to ResourcePlus!</h1>
+      <article className="dark p-5 text-dark">
+        <h1>projects to complete</h1>
       </article>
       <Container>
-        <Card className="m-2 border-dark text-center">
-          <Card.Header className="bg-dark text-white">
-            <h2>Login for full functionality</h2>
+        <Card className="m-2 mt-5 border-dark text-center loginCard">
+          <Card.Header className="dark text-white">
+            <h2>login for full functionality</h2>
           </Card.Header>
           <Card.Body>
             <button onClick={() => handleAuth()} className="btn btn-dark">
-              Login w/ Github
+              login w/ Github
             </button>
           </Card.Body>
         </Card>

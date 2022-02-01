@@ -13,7 +13,8 @@ export default function CatCreate(props) {
         }
 
         console.log(categoryToCreate)
-        axios.post(`http://localhost:55378/api/Categories/`, categoryToCreate).then(() => {
+        // axios.post(`http://localhost:55378/api/Categories/`, categoryToCreate).then(() => {
+        axios.post(`http://api.miketullis.com/api/Categories/`, categoryToCreate).then(() => {
             props.getCategories();
             props.setShowCreate(false);
         } )
@@ -29,7 +30,7 @@ export default function CatCreate(props) {
             validationSchema={catSchema}
             onSubmit={values => {handleSubmit(values)}}>
                 {({errors, touched}) => (
-                    <div className='container'>
+                    <div>
                         <Form id="catForm" className='row text-center m-auto'>
                             <div className='form-group col-md-12 m-1 p-1'>
                                 <Field name="Name" className="form-control" placeholder="Name" />
@@ -48,7 +49,7 @@ export default function CatCreate(props) {
                                }
                             </div>
                             <div className='form-group col-md-12-m1'>
-                                <button type="submit" className='btn btn-success'>Submit</button>
+                                <button type="submit" className='btn dark'>Submit</button>
                             </div>
                         </Form>
                     </div>

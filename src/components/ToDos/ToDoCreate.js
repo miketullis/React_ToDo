@@ -17,7 +17,8 @@ const handleSubmit = (values) =>{
    }
    console.log('ToDo', toDoToCreate)
    
-   axios.post('http://localhost:55378/api/ToDo/', toDoToCreate).then(() => {
+  // axios.post('http://localhost:55378/api/ToDo/', toDoToCreate).then(() => {
+   axios.post('http://api.miketullis.com/api/ToDo/', toDoToCreate).then(() => {
        props.getToDos();
        props.setShowCreate(false);
    })
@@ -72,7 +73,7 @@ const handleSubmit = (values) =>{
                             </Field>
                         </div>
                         <div className='form-group'>
-                            <button type="submit" className='btn btn-info m-3'> Submit Todo to API</button>
+                            <button type="submit" className='btn dark m-1'> Submit Todo to API</button>
                         </div>
                     </Form>
                 )}

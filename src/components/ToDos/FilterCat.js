@@ -2,7 +2,7 @@ import React from "react";
 
 export default function FilterCat(props) {
   return (
-    <div className="text-center mt-4">
+    <div className="text-center">
       <button
         onClick={() => props.setFilter(0)}
         className="btn btn-dark m-1"

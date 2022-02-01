@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/logo.svg"
+import logo from "../images/MRT-Logo.png"
 import { Navbar, Nav } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import "./Navigation.css"
@@ -10,7 +10,7 @@ export default function Navigation() {
   return (
     <Navbar variant="dark" expand="md" className="p-2 dark">
       <Navbar.Brand href="/">
-        <img src={logo} alt="logo" /> MRT ToDo
+        <img src={logo} alt="logo" className="logo"/> 
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
