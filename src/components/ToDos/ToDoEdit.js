@@ -33,8 +33,8 @@ export default function ToDoEdit(props) {
   //THE UI
   return (
     <Modal show={props.showEdit} onHide={() => props.setShowEdit(false)}>
-      <Modal.Header className="bg-info" closeButton>
-        <h3>Editing {props.todo.Action}</h3>
+      <Modal.Header className="contrast" closeButton>
+        <h3>Editing: {props.todo.Action}</h3>
       </Modal.Header>
       <Modal.Body>
         <Formik
@@ -74,22 +74,16 @@ export default function ToDoEdit(props) {
                 ) : //This is for when validation passed on prior to validation the form
                 null}
               </div>
+              <div className="form-group m-3 text-center">
+            
+                <h5>completed?</h5>
 
-              <div className="form-group m-3">
-                <h5> Completed?</h5>
-
-
+                    <span className="toggletag">no</span>
                     <Switch name="Done" isToggled={isToggled} onToggle={() => setIsToggled(!isToggled)} />
-              
+                    <span className="toggletag">yes</span>
                     {/* <Switch name="Done" isOn={value} handleToggle={() => setValue(!value)} />  */}
-              
+               
               </div>
-
-
-
-
-
-
               <div className="form-group m-3">
                 <Field name="CategoryId" as="select" className="form-control">
                   <option value="0" disabled>
@@ -104,8 +98,8 @@ export default function ToDoEdit(props) {
                   ))}
                 </Field>
               </div>
-              <div className="form-group">
-                <button type="submit" className="btn btn-info m-3">
+              <div className="form-group text-center">
+                <button type="submit" className="btn dark m-3">
                   {" "}
                   Submit ToDo to API
                 </button>

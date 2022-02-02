@@ -13,6 +13,5 @@ const catSchema = Yup.object().shape({
     Description: Yup.string().max(100, '100 Characters Max'),
 })
 
-
 export default toDoSchema;
 export {catSchema};

@@ -9,11 +9,11 @@ a.nav-link {
 
 }
 a.nav-link.active {
-  color: #61892F;
+  color: #86C232;
 }
 
 .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
-    color: #61892F;
+    color: #86C232;
 }
 
 .logo:hover{

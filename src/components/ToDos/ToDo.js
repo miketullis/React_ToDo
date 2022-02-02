@@ -58,7 +58,8 @@ export default function ToDos() {
       {currentUser.email === "miketullis@hotmail.com" && (
         <div className="dark p-2 text-center">
           <button
-            onClick={() => setShowCreate(!showCreate)}
+            // onClick={() => setShowCreate(!showCreate)}
+            onClick={() => setShowCreate(!showCreate)} 
             className="btn dark"
           >
             {!showCreate ? "Create New ToDo" : "Close"}

@@ -25,8 +25,8 @@ export default function CatEdit(props) {
     //THE UI
     return (
         <Modal show={props.showEdit} onHide={() => props.setShowEdit(false)}>
-            <Modal.Header closeButton>
-                <h2>Editing {props.category.Name}</h2>
+            <Modal.Header className="contrast" closeButton>
+                <h2>Editing: {props.category.Name}</h2>
             </Modal.Header>
             <Modal.Body>
             <Formik
@@ -37,7 +37,7 @@ export default function CatEdit(props) {
             validationSchema={catSchema}
             onSubmit={values => {handleSubmit(values)}}>
                 {({errors, touched}) => (
-                    <div className='container'>
+                    <div>
                         <Form id="catForm" className='row text-center m-auto'>
                             <div className='form-group col-md-12 m-1 p-1'>
                                 <Field name="Name" className="form-control" placeholder="Name" />
@@ -58,7 +58,7 @@ export default function CatEdit(props) {
                                }
                             </div>
                             <div className='form-group col-md-12-m1'>
-                                <button type="submit" className='btn btn-success'>Submit</button>
+                                <button type="submit" className='btn dark'>Submit</button>
                             </div>
                         </Form>
                     </div>

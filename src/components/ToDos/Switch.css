@@ -39,7 +39,7 @@
 
 
 input:checked + .slider{
-  background-color: #2196f3;    /* change background color when clicked */
+  background-color: #86C232;    /* change background color when clicked */
 }
 
 input:checked + .slider:before{

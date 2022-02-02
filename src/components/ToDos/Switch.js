@@ -15,19 +15,6 @@ export default Switch;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const Switch = ({ isChecked, handleToggle }) => {
 //     return (
 //       <>
@@ -49,5 +36,4 @@ export default Switch;
 //       </>
 //     );
 //   };
-  
 //   export default Switch;
