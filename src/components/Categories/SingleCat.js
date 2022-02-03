@@ -19,10 +19,10 @@ export default function SingleCat(props) {
             <td>{props.category.Description}</td>
             {currentUser.email === "miketullis@hotmail.com" && 
             <td>
-              <button className="m-1 rounded" id="eidtLink" onClick={() => setShowEdit(true)}>
+              <button id="editLink" className="catBtn" onClick={() => setShowEdit(true)}>
               <FontAwesomeIcon icon={[ 'fas', 'edit']} />
               </button>
-        <button id="deleteLink" onClick={() => {
+        <button id="deleteLink" className="catBtn" onClick={() => {
           if(window.confirm(`Are you sure you want to delete ${props.category.Name}?`)){
                props.deleteCategory(props.category.CategoryId)
           }

@@ -15,9 +15,10 @@ export default function Logout() {
     }
 
     return (
-        <div className="logout text-center p-3 dark text-white">
+        <div className="logout text-center pt-3 dark text-white">
             <Profile />
             <button  onClick={() => handleAuth()} className="btn dark-out">Logout</button>
+            {<p className='text-white mt-1'>Copyright &#169; {new Date().getFullYear()}</p>}
         </div>
     )
 }

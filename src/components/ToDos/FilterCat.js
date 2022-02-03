@@ -5,7 +5,7 @@ export default function FilterCat(props) {
     <div className="text-center">
       <button
         onClick={() => props.setFilter(0)}
-        className="btn btn-dark m-1"
+        className="btn btn-dark"
       >
         All
       </button>
@@ -13,7 +13,7 @@ export default function FilterCat(props) {
         <button
           key={cat.CategoryId}
           onClick={() => props.setFilter(Number(cat.CategoryId))}
-          className="btn btn-dark m-1"
+          className="btn btn-dark"
         >
           {cat.Name}
         </button>

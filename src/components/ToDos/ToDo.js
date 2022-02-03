@@ -105,6 +105,7 @@ export default function ToDos() {
         </article>
       </Container>
       {currentUser && <Logout />} 
+
     </section>
   );
 }

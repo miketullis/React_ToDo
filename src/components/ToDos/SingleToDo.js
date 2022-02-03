@@ -19,7 +19,7 @@ export default function SingleToDo(props) {
       ) : (
         <p>No Description Provided</p>
       )}
-      <span>Completed: {props.todo.Done ? "Yes" : "No"}</span>
+      <span>Status: {props.todo.Done ? "Completed" : "Incomplete"}</span>
 
       {/* EDIT */}
       <button onClick={() => setShowEdit(!showEdit)} id="editLink">

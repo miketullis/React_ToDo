@@ -72,7 +72,6 @@ export default function Categories(props) {
             getCategories={getCategories}
             />
 
-
             )}
           </tbody>
         </table>
