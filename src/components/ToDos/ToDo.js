@@ -18,7 +18,6 @@ export default function ToDos() {
   const [filter, setFilter] = useState(0);
 
   const getToDos = () => {
-   // axios.get(`http://localhost:55378/api/todo`).then((response) => {
     axios.get(`http://api.miketullis.com/api/todo`).then((response) => {
       console.table(response.data);
       setToDos(response.data);
@@ -26,7 +25,6 @@ export default function ToDos() {
   };
 
   const getCategories = () => {
-    //axios.get(`http://localhost:55378/api/categories/`).then((response) => {
     axios.get(`http://api.miketullis.com/api/categories/`).then((response) => {
       console.table(response.data);
       setCategories(response.data);
@@ -35,7 +33,6 @@ export default function ToDos() {
 
   // function to delete from the API
   const deleteToDo = (id) => {
-    // axios.delete(`http://localhost:55378/api/todo/${id}`).then(() => {
     axios.delete(`http://api.miketullis.com/api/todo/${id}`).then(() => {
       getToDos();
     });
@@ -53,13 +50,10 @@ export default function ToDos() {
       <article className="dark pt-0 pb-3 text-center">
         <h1>projects to do</h1>
       </article>
-
-      {/* CREATE-STEP 3 - Conditional rendering for the create form.  We are using the currentUser.email to determine if the logged in user has access to create functionality */}
       {currentUser.email === "miketullis@hotmail.com" && (
         <div className="dark p-2 text-center">
           <button
-            // onClick={() => setShowCreate(!showCreate)}
-            onClick={() => setShowCreate(!showCreate)} 
+             onClick={() => setShowCreate(!showCreate)} 
             className="btn dark"
           >
             {!showCreate ? "Create New ToDo" : "Close"}

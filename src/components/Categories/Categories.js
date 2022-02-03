@@ -15,7 +15,6 @@ export default function Categories(props) {
 
   //Hook to get all categories from the API
   const getCategories = () => {
-    //axios.get(`http://localhost:55378/api/categories/`).then((response) => {
     axios.get(`http://api.miketullis.com/api/categories/`).then((response) => {
       console.table(response.data);
       setCategories(response.data);
@@ -23,7 +22,6 @@ export default function Categories(props) {
   };
 
   const deleteCategory = (id) =>{
-    //axios.delete(`http://localhost:55378/api/categories/${id}`).then(() => {getCategories()})
     axios.delete(`http://api.miketullis.com/api/categories/${id}`).then(() => {getCategories()})
 }
 

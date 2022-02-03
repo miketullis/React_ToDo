@@ -15,8 +15,7 @@ export default function CatEdit(props) {
         }
         
         console.log(categoryToEdit)
-        // axios.put(`http://localhost:55378/api/Categories/`, categoryToEdit).then(() => {
-        axios.put(`http://api.miketullis.com/api/Categories/`, categoryToEdit).then(() => {
+          axios.put(`http://api.miketullis.com/api/Categories/`, categoryToEdit).then(() => {
             props.getCategories();
             props.setShowEdit(false);
         } )

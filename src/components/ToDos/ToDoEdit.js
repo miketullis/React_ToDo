@@ -14,21 +14,18 @@ export default function ToDoEdit(props) {
       ToDoId: props.todo.ToDoId,
       Action: values.Action,
       Description: values.Description,
-      Done: false,
+      Done: isToggled,
       CategoryId: values.CategoryId,
     };
     console.log("ToDo", toDoToEdit);
 
-    //axios.put("http://localhost:55378/api/ToDo/", toDoToEdit).then(() => {
     axios.put("http://api.miketullis.com/api/ToDo/", toDoToEdit).then(() => {
       props.getToDos();
       props.setShowEdit(false);
     });
   };
 
-
-  // const [value, setValue] = useState(false);//old switch
-  const [isToggled, setIsToggled] = useState(false)
+  const [isToggled, setIsToggled] = useState(props.todo.Done) //will set the initial value of the toggle to match the data
 
   //THE UI
   return (
@@ -42,7 +39,6 @@ export default function ToDoEdit(props) {
             ToDoId: props.todo.ToDoId,
             Action: props.todo.Action,
             Description: props.todo.Description,
-            // Done: false,
             Done: props.todo.Done,
             CategoryId: props.todo.CategoryId,
           }}
@@ -75,15 +71,11 @@ export default function ToDoEdit(props) {
                 null}
               </div>
               <div className="form-group m-3 text-center">
-            
                 <h5>completed?</h5>
-
                     <span className="toggletag">no</span>
                     <Switch name="Done" isToggled={isToggled} onToggle={() => setIsToggled(!isToggled)} />
                     <span className="toggletag">yes</span>
-                    {/* <Switch name="Done" isOn={value} handleToggle={() => setValue(!value)} />  */}
-               
-              </div>
+               </div>
               <div className="form-group m-3">
                 <Field name="CategoryId" as="select" className="form-control">
                   <option value="0" disabled>
@@ -91,7 +83,6 @@ export default function ToDoEdit(props) {
                     [-- Please choose a category... --]
                   </option>
                   {props.categories.map((x) => (
-                    //CREATE-STEP 8 - below we map the rest of the options
                     <option key={x.CategoryId} value={x.CategoryId}>
                       {x.Name}
                     </option>

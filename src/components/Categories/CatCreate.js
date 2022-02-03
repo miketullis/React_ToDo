@@ -13,7 +13,6 @@ export default function CatCreate(props) {
         }
 
         console.log(categoryToCreate)
-        // axios.post(`http://localhost:55378/api/Categories/`, categoryToCreate).then(() => {
         axios.post(`http://api.miketullis.com/api/Categories/`, categoryToCreate).then(() => {
             props.getCategories();
             props.setShowCreate(false);
