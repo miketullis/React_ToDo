@@ -2,6 +2,12 @@
     min-height: 83vh;
 }
 
+.logout{
+    min-height: 100px;
+    font-weight: 350;
+    letter-spacing: 0.05em;
+}
+
 span.profile{
     color: white;
 }
@@ -12,4 +18,8 @@ span.profile img{
     border: 1px solid white;
     border-radius: 50%;
     margin: 0 10px;
+    position: relative;
+    bottom: 5px;
 }
+
+

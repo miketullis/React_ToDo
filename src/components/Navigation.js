@@ -8,7 +8,7 @@ export default function Navigation() {
   const { currentUser, authenticate, logout } = useAuth();
 
   return (
-    <Navbar variant="dark" expand="md" className="p-2 dark">
+    <Navbar variant="dark" expand="md" className="p-2 pb-0 dark">
       <Navbar.Brand href="/">
         <img src={logo} alt="logo" className="logo"/> 
       </Navbar.Brand>

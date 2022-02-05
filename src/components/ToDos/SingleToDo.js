@@ -14,12 +14,12 @@ export default function SingleToDo(props) {
   return (
     <div className="singleTodo col-md-5 m-4">
       <h3>{props.todo.Action}</h3>
-           {props.todo.Description !== null ? (
+      {props.todo.Description !== null ? (
         <p>{props.todo.Description}</p>
       ) : (
         <p>No Description Provided</p>
       )}
-      <span>Status: {props.todo.Done ? "Completed" : "Incomplete"}</span>
+      <span className="Status">Status: {props.todo.Done ? "Completed" : "Incomplete"}</span>
 
       {/* EDIT */}
       <button onClick={() => setShowEdit(!showEdit)} id="editLink">

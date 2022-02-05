@@ -32,8 +32,8 @@ export default function Categories(props) {
 
   return (
     <section className="categories">
-      <article className="dark pt-0 pb-3 text-center">
-        <h1>categories dashboard</h1>
+      <article className="dark pt-0 pb-1 text-center">
+        <h1>categories</h1>
       </article>
 
       {/* CREATE FUNCTIONALITY */}

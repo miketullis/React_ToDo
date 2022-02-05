@@ -3,13 +3,49 @@ article h1{
     font-size: 2.75rem;
 }
 
-section.Todo {
-    /* background-image: url('../../images/background.jpg'); */
-    background-size: 100%;
-    background-position: bottom;
-    background-color: black;
+article.TodoGallery h2.alert {
+    height: 3.5em;
+  }
+  
+  article.TodoGallery div.singleTodo {
+    border: 2px solid #212529;
+    text-align: center;
+    position: relative; 
+    padding: 0 0 2em;
+    height: 15em;
+    margin: 0;
+    border-radius: 5px;
+    background-color: rgba(200,200,200, .95);    
 }
-section.todo {
+
+.container {
+    min-height: calc( 100vh - 333px ) !important;
+    max-width: 85%;
+    padding-top: 30px;
+  }
+
+.createTodo .card {
+    border: none;
+}
+
+.createTodo form{
+    padding:2em;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.categories {
+    /* background-color: rgb(200,200,200); */
+    font-weight: 600;
+}
+
+section.todo, section.Todo {
     /* background-image: url('../../images/background.jpg'); */
     background-size: 100%;
     background-position: bottom;
@@ -21,25 +57,32 @@ section.Todo article.todoGallery {
         width: 100%;
 }
 
-article.TodoGallery div.singleTodo {
-    border: 2px solid #212529;
-    text-align: center;
-    position: relative; 
-    padding: 0 0 2em;
-    height: 15em;
-    margin: 0;
-    border-radius: 5px;
-    background-color: rgba(200,200,200, .95);    
+table.table, .loginCard  {
+    box-shadow: 8px 8px 9px darkgrey;
+}  
+
+.table-bordered>:not(caption)>*>* {
+    border-width: 0 0 !important;
 }
+
+.table-bordered{
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 
 div.singleTodo  {
     position:relative;
-    border: 1px, solid, #222626;
+    /* border: 1px, solid, #222626; */
+    text-align: center;
     background-color:#C8C8C8;
     padding: 0 0 1em;
     border-radius: 15px;
     box-shadow: 6px 6px 8px darkgrey;
-}   
+    min-height: 185px;
+    }   
 
 div.singleTodo h3 {
     font-size: 24px;
@@ -60,89 +103,6 @@ div.singleTodo p {
     padding: 1em;
 }
 
-.createTodo .card {
-    border: none;
-}
-
-.createTodo form{
-    padding:2em;
-    border: 2px solid white;
-    border-radius: 10px;
-}
-
-.singleTodo button#deleteLink {
-  position: absolute;
-  font-size: 1.2em;  
-  width: 35px;
-  height: 35px;
-  top: .75em;
-  right: .75em;
-  background: none;
-  outline: none;
-  color: #86C232;
-  border: 2px solid #86C232;
-  border-radius: 5px;
-  transition: .5s;
-}
-
-.singleTodo button#editLink {
-    position: absolute;
-    font-size: 1.2em;
-    width: 35px;
-    height: 35px;
-    top: .75em;
-    left: .75em;
-    background: none;
-    outline: none;
-    color: #86C232;
-    border: 2px solid #86C232;
-    border-radius: 5px;
-    transition: .5s;
-  }
-
-  button#editLink.catBtn, button#deleteLink.catBtn  {   
-margin-left: 10px;
-margin-right: 10px;
-width: 37px;
-height: 37px;
-border-radius: 0.35rem;
-}
-
-
-button#deleteLink:hover, button#editLink:hover {
-  background-color: #474B4f;
-  color: whitesmoke;
-  border: 2px solid whitesmoke;
-}
-
-article.TodoGallery h2.alert {
-  height: 3.5em;
-}
-
-.container {
-  /* background-color:rgba(200,200,200, .95); */
-  min-height: calc( 100vh - 353px ) !important;
-  max-width: 85%;
-  padding-top: 30px;
-}
-
-section.categories {
-    /* background-color: rgb(200,200,200); */
-    font-weight: 600;
-}
-
-
-/* section {
-  background-image: url('../../images/motionBackground.gif'); 
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-.form-group input, .form-group textarea, .form-group select {
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .dark{
 color: whitesmoke;
@@ -175,10 +135,6 @@ button.btn.btn-dark:hover{
     background-color: #474B4f;
 }
 
-table.table, .loginCard  {
-    box-shadow: 8px 8px 9px darkgrey;
-}  
-
 div.dark  {
     background-color: #262626;
     box-shadow: 0px 9px 9px darkgrey;
@@ -200,49 +156,68 @@ div.contrast {
     box-shadow: 4px 4px 8px darkgrey;
 }
 
-
 .btn.dark-out{
     color: whitesmoke;
     background-color: #262626;
     padding: 0;
   }
 
-.toggletag{
-    font-weight: bold;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 .btn-shift-right{
-position: relative;
-left: 7%;
-}
-
-.logout{
-    min-height: 100px;
-    font-weight: 350;
-    letter-spacing: 0.07em;
-}
-
-.profile img{
     position: relative;
-    bottom: 5px;
+    left: 7%;
 }
 
+.singleTodo button#deleteLink {
+    position: absolute;
+    text-align: center;
+    font-size: 1.2em;  
+    width: 35px;
+    height: 35px;
+    top: .75em;
+    right: .75em;
+    background: none;
+    outline: none;
+    color: #86C232;
+    border: 2px solid #86C232;
+    border-radius: 5px;
+    transition: .5s;
+  }
+  
+  .singleTodo button#editLink {
+      position: absolute;
+      text-align: center;
+      font-size: 1.2em;
+      width: 35px;
+      height: 35px;
+      top: .75em;
+      left: .75em;
+      background: none;
+      outline: none;
+      color: #86C232;
+      border: 2px solid #86C232;
+      border-radius: 5px;
+      transition: .5s;
+    }
+  
+    button#editLink.catBtn, button#deleteLink.catBtn  {   
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 37px;
+        height: 37px;
+        border-radius: 0.35rem;
+    }
+  
+  button#deleteLink:hover, button#editLink:hover {
+    background-color: #474B4f;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+  }
 
-
-.table-bordered>:not(caption)>*>* {
-    border-width: 0 0 !important;
+Span.Status{
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 65px);
 }
-
-.table-bordered{
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
 
 @media screen and (max-width:1023px) {
     section.Todo {

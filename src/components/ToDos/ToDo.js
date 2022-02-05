@@ -9,7 +9,6 @@ import { useAuth } from "../../contexts/AuthContext";
 import Logout from "../Auth/Logout";
 import FilterCat from "./FilterCat";
 
-
 export default function ToDos() {
   const [todos, setToDos] = useState(sampleToDos);
   const { currentUser } = useAuth();
@@ -44,10 +43,9 @@ export default function ToDos() {
     getCategories();
   }, []);
 
-
   return (
     <section className="todos">
-      <article className="dark pt-0 pb-3 text-center">
+      <article className="dark pt-0 pb-1 text-center">
         <h1>projects to do</h1>
       </article>
       {currentUser.email === "miketullis@hotmail.com" && (

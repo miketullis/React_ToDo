@@ -16,9 +16,11 @@ a.nav-link.active {
     color: #86C232;
 }
 
-.logo:hover{
-    opacity: 55%;
-}
 .logo{
    max-width: 70vw;
+   z-index: 99;
+}
+
+.logo:hover {
+  filter: brightness(50%);
 }

@@ -43,3 +43,9 @@ input:checked + .slider{
 input:checked + .slider:before{
   transform: translateX(26px); /* move slider when clicked */
 }
+
+.toggletag{
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+}
