@@ -204,15 +204,15 @@ div.contrast {
         height: 37px;
         border: 2px solid black;
         border-radius: 0.35rem;
+        margin-top: 3px;
+        margin-bottom: 3px;
     }
-
   
   button#deleteLink:hover, button#editLink:hover {
     background-color: #474B4f;
     color: whitesmoke;
     border: 2px solid whitesmoke;
   }
-
     
 /* Stubborn Styling */
 Span.Status{
@@ -266,6 +266,8 @@ button#deleteLink.catBtn svg {
         width: 95%;
     }
 }
+
+
 /* #endregion */
 
 
