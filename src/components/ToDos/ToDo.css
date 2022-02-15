@@ -169,7 +169,6 @@ div.contrast {
 
 .singleTodo button#deleteLink {
     position: absolute;
-    text-align: center;
     font-size: 1.2em;  
     width: 35px;
     height: 35px;
@@ -185,7 +184,6 @@ div.contrast {
   
   .singleTodo button#editLink {
       position: absolute;
-      text-align: center;
       font-size: 1.2em;
       width: 35px;
       height: 35px;
@@ -204,7 +202,10 @@ div.contrast {
         margin-right: 10px;
         width: 37px;
         height: 37px;
+        border: 2px solid black;
         border-radius: 0.35rem;
+        margin-top: 3px;
+        margin-bottom: 3px;
     }
   
   button#deleteLink:hover, button#editLink:hover {
@@ -212,13 +213,51 @@ div.contrast {
     color: whitesmoke;
     border: 2px solid whitesmoke;
   }
-
+    
+/* Stubborn Styling */
 Span.Status{
     position: absolute;
     bottom: 10px;
     left: calc(50% - 65px);
 }
 
+.singleTodo button#editLink svg { 
+    position: absolute;  
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    text-align: center;
+}
+
+.singleTodo button#deleteLink svg  { 
+    position: absolute;  
+    left: calc(50% - 8px);
+    top: calc(50% - 10px);
+    text-align: center;
+}
+
+td button{
+    position: relative;
+}
+
+button#editLink.catBtn svg { 
+    color: black;
+    position: absolute;  
+    left: calc(50% - 8px);
+    top: calc(50% - 7px);
+    text-align: center;
+}
+
+button#deleteLink.catBtn svg { 
+    color: black;
+    position: absolute;  
+    left: calc(50% - 7px);
+    top: calc(50% - 7px);
+    text-align: center;
+}
+
+
+
+/* Media Queries */
 @media screen and (max-width:1023px) {
     section.Todo {
         background-size: 200%;
@@ -227,6 +266,8 @@ Span.Status{
         width: 95%;
     }
 }
+
+
 /* #endregion */
 
 

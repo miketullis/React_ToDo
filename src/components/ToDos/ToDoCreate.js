@@ -72,7 +72,7 @@ const handleSubmit = (values) =>{
                             </Field>
                         </div>
                         <div className='form-group'>
-                            <button type="submit" className='btn dark m-1'> Submit Todo to API</button>
+                            <button type="submit" className='btn dark m-1'> Submit</button>
                         </div>
                     </Form>
                 )}
